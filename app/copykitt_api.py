@@ -1,11 +1,11 @@
 from fastapi import FastAPI, HTTPException
 from copykitt import generate_branding_snippet, generate_keywords
-# from mangum import Mangum
+from mangum import Mangum
 # from fastapi.middleware.cors import CORSMiddleware
 
 
 app = FastAPI()
-# handler = Mangum(app)
+handler = Mangum(app) #handler wrapper enabling use with aws lambda
 MAX_INPUT_LENGTH = 32
 
 
